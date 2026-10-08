@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SushimanIA - Arte em Sushi</title>
+    <!-- Tailwind CSS para um design moderno e responsivo -->
+    <script src="https://tailwindcss.com"></script>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+    </style>
+</head>
+<body class="bg-stone-900 text-stone-100 antialiased">
+
+    <!-- NAV BAR -->
+    <header class="sticky top-0 z-50 bg-stone-900/95 backdrop-blur border-b border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="text-2xl font-bold text-red-500 tracking-wider">
+                SUSHI<span class="text-white">MANIA</span>
+            </div>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#inicio" class="hover:text-red-500 transition">Início</a>
+                <a href="#cardapio" class="hover:text-red-500 transition">Cardápio</a>
+                <a href="#sobre" class="hover:text-red-500 transition">Sobre Nós</a>
+            </nav>
+            <div>
+                <a href="#contato" class="bg-red-600 hover:bg-red-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition shadow-lg shadow-red-600/20">
+                    Fazer Pedido
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="relative overflow-hidden py-20 lg:py-32 border-b border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="text-red-500 font-semibold tracking-widest uppercase text-sm block">Tradição & Modernidade</span>
+                <h1 class="text-4xl sm:text-6xl font-bold tracking-tight text-white leading-tight">
+                    O verdadeiro sabor do <span class="text-red-500">Japão</span> na sua mesa.
+                </h1>
+                <p class="text-stone-400 text-lg max-w-md">
+                    Sushis preparados na hora com ingredientes selecionados e o frescor que você merece. Viva essa experiência gastronômica.
+                </p>
+                <div class="pt-4 flex flex-col sm:flex-row gap-4">
+                    <a href="#cardapio" class="bg-red-600 hover:bg-red-700 text-center text-white px-8 py-4 rounded-xl font-medium transition">
+                        Ver Cardápio
+                    </a>
+                    <a href="#sobre" class="border border-stone-700 hover:border-stone-500 text-center text-white px-8 py-4 rounded-xl font-medium transition">
+                        Conhecer Nossa História
+                    </a>
+                </div>
+            </div>
+            <div class="relative flex justify-center">
+                <!-- Círculo de fundo decorativo -->
+                <div class="absolute w-72 h-72 sm:w-96 sm:h-96 bg-red-600/10 rounded-full blur-3xl -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+                <!-- Imagem Ilustrativa (Placeholder de alta qualidade de Sushi) -->
+                <img src="https://unsplash.com" 
+                     alt="Combo de Sushi Premium" 
+                     class="rounded-2xl shadow-2xl object-cover w-full max-w-md border border-stone-800 transform hover:scale-105 transition duration-500">
+            </div>
+        </div>
+    </section>
+
+    <!-- CARDÁPIO EM DESTAQUE -->
+    <section id="cardapio" class="py-20 bg-stone-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white">Nossos Combinados Mais Pedidos</h2>
+                <p class="text-stone-400">Escolha o seu favorito. Opções montadas cuidadosamente pelo nosso Sushiman.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="bg-stone-900 border border-stone-800 rounded-2xl overflow-hidden group hover:border-stone-700 transition">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://unsplash.com" alt="Combo Premium" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-white">Combinado Premium (16 pçs)</h3>
+                            <span class="text-red-500 font-bold text-lg">R$ 89,90</span>
+                        </div>
+                        <p class="text-stone-400 text-sm">4 Jhou Salmão, 4 Hossomaki, 4 Uramaki e 4 Niguiri de Salmão Fresco.</p>
+                        <button class="w-full bg-stone-800 hover:bg-red-600 text-white py-2.5 rounded-xl text-sm font-medium transition">Adicionar ao Pedido</button>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="bg-stone-900 border border-stone-800 rounded-2xl overflow-hidden group hover:border-stone-700 transition">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://unsplash.com" alt="Combo Hot" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-white">Hot Roll Especial (10 pçs)</h3>
+                            <span class="text-red-500 font-bold text-lg">R$ 42,00</span>
+                        </div>
+                        <p class="text-stone-400 text-sm">Sushi frito crocante recheado com salmão, cream cheese, finalizado com tarê e gergelim.</p>
+                        <button class="w-full bg-stone-800 hover:bg-red-600 text-white py-2.5 rounded-xl text-sm font-medium transition">Adicionar ao Pedido</button>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="bg-stone-900 border border-stone-800 rounded-2xl overflow-hidden group hover:border-stone-700 transition">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://unsplash.com" alt="Combo Executivo" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-white">Combinado do Chef (32 pçs)</h3>
+                            <span class="text-red-500 font-bold text-lg">R$ 159,90</span>
+                        </div>
+                        <p class="text-stone-400 text-sm">Uma seleção variada incluindo sashimis, sushis especiais maçaricados e peças exclusivas.</p>
+                        <button class="w-full bg-stone-800 hover:bg-red-600 text-white py-2.5 rounded-xl text-sm font-medium transition">Adicionar ao Pedido</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE NÓS -->
+    <section id="sobre" class="py-20 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1">
+                <img src="https://unsplash.com" alt="Preparação de Sushi" class="rounded-2xl border border-stone-800 shadow-xl">
+            </div>
+            <div class="space-y-6 order-1 md:order-2">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white">Nossa Arte, Sua Experiência</h2>
+                <p class="text-stone-400 leading-relaxed">
+                    Nascemos da paixão pela culinária milenar japonesa. Cada corte de peixe, a consistência exata do arroz e a harmonia dos temperos seguem o mais rigoroso padrão tradicional.
+                </p>
+                <p class="text-stone-400 leading-relaxed">
+                    Mais do que apenas servir comida, nosso objetivo é proporcionar momentos inesquecíveis através do paladar. Venha nos visitar ou peça do conforto de sua casa!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / CONTATO -->
+    <footer id="contato" class="bg-stone-950 border-t border-stone-800 py-12 text-sm text-stone-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-3 gap-8 mb-8">
+            <div class="space-y-3">
+                <div class="text-lg font-bold text-white tracking-wider">SUSHI<span class="text-red-500">MANIA</span></div>
+                <p class="text-stone-400">Qualidade e frescor no seu delivery de comida japonesa.</p>
+            </div>
+            <div class="space-y-2">
+                <div class="text-white font-semibold">Funcionamento</div>
+                <p>Terça a Domingo: 18h às 23h30</p>
+                <p>Delivery e Presencial</p>
+            </div>
+            <div class="space-y-2">
+                <div class="text-white font-semibold">Contato</div>
+                <p>📍 Av. Principal, 1000 - Centro</p>
